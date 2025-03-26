@@ -1,0 +1,16 @@
+/*
+8) Señalar errores de compilación y/o ejecución en el siguiente código
+
+object obj = new int[10];
+dynamic dyna = 13;
+Console.WriteLine(obj.Length);   error de copi, objeto no posee .length
+Console.WriteLine(dyna.Length);  error en ejecuicion, dynamis admite lenght pero int no
+
+
+
+object obj = new int[10];
+dynamic dyna = "queso";
+
+Console.WriteLine(dyna.Length); 
+
+*/

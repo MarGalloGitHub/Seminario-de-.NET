@@ -1,0 +1,72 @@
+/*
+8) Dada la siguiente definición incompleta de clase:
+
+class ListaDePersonas
+ {
+    public void Agregar(Persona p)
+    {
+        . . .
+    }
+    . . .
+ }
+
+Completarla y agregar dos indizadores de sólo lectura
+Un índice entero que permite acceder a las personas de la lista por número de documento. Por ejemplo 
+p=lista[30456345] devuelve el objeto Persona que tiene DNI=30456345 o null en caso que no 
+exista en la lista.
+Un índice de tipo char que devuelve un List<string> con todos los nombres de las personas de la 
+lista que comienzan con el carácter pasado como índice.
+
+
+using TEORIA5;
+
+class ListaDePersonas{
+
+    private  List <Persona> lista = [];
+
+    public void Agregar(Persona P)
+    {
+        lista.Add(P);
+    }
+
+    public Persona this[int dni]{
+        get
+        {
+           int elementos = lista.Count;
+           int i = 0;
+           while((i < elementos) && (lista[i].DNI != dni))
+           {
+                i++;
+           }
+           if(lista[i].DNI == dni)
+           {
+            return lista[i];
+           }
+           else
+           {
+            return null;
+           }
+        }
+    }
+
+    public List<string> this[char letra]{
+        get
+        {
+           int elementos = lista.Count;
+           int i = 0;
+           char primeraLetra;
+           List<string> aux = new List<string>();
+           while(i < elementos)
+           {
+                primeraLetra = lista[i].Nombre[0];
+                if(primeraLetra == letra)
+                {
+                    aux.Add(lista[i].Nombre);
+                }
+                i++;
+           }
+           return aux;
+        }
+    }
+}   
+*/

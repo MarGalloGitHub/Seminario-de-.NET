@@ -1,0 +1,12 @@
+/*
+10) Verificar con un par de ejemplos si la sección opcional [:formatString] de formatos 
+compuestos redondea o trunca cuando se formatean números reales restringiendo la cantidad de 
+decimales. Plantear los ejemplos con cadenas de formato compuesto y con cadenas interpoladas.
+
+PREGUNTAR
+
+string marca = "Ford";
+int modelo = 2000;
+string st = string.Format("Es un {0} año {1}", marca, modelo);
+
+*/

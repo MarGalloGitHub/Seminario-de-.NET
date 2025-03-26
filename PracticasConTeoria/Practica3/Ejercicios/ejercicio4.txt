@@ -1,0 +1,126 @@
+/*
+4) Implementar los métodos GetDiagonalPrincipal y GetDiagonalSecundaria que devuelven 
+un vector con la diagonal correspondiente de la matriz pasada como parámetro. Si la matriz no es 
+cuadrada generar una excepción ArgumentException.
+
+double[] GetDiagonalPrincipal(double[,] matriz)
+double[] GetDiagonalSecundaria(double[,] matriz)
+
+
+Console.WriteLine("Escriba un numero");
+string x = Console.ReadLine();
+int xNum = int.Parse(x);
+
+Console.WriteLine("Escriba un numero");
+string y = Console.ReadLine();
+int yNum = int.Parse(y);
+
+double[,] matriz = new double[xNum,yNum];
+
+int i;
+int j;
+for(i=0 ; i<= (xNum - 1) ; i++)
+{
+    for(j=0 ; j<=(yNum - 1) ; j++)
+    {
+        Console.WriteLine("Escriba un numero para la matriz");
+        string u = Console.ReadLine();
+        int num = int.Parse(u);
+        matriz[i,j] = num;
+    }
+}
+
+try
+{
+    esSimetrica(xNum,yNum);
+    double[] vector1 = GetDiagonalPricipal(matriz);
+    double[] vector2 = GetDiagonalSecundaria(matriz);
+    Console.WriteLine("Funciono");
+}
+catch
+{
+    Console.WriteLine("No son simetricas");
+}
+
+
+double[] GetDiagonalPricipal(double[,] matriz)
+{
+    int i;
+    int cant = matriz.Length;
+    double[] vector; 
+    if((cant % 2) == 0)
+    {
+      vector = new double[cant/2];
+      for(i=0 ; i<=(cant/2)-1 ; i++)
+      {
+        vector[i] = matriz[i,i];
+      }
+
+      for(i=0 ; i<= (cant/2) - 1; i++)
+      {
+        Console.WriteLine(vector[i]);
+      }
+    }
+    else
+    {
+        vector = new double[(int)Math.Sqrt(cant)];
+        for(i=0 ; i<= (Math.Sqrt(cant)-1) ; i++)
+        {
+            vector[i] = matriz[i,i];
+        }
+
+        for(i=0 ; i<= (Math.Sqrt(cant)) - 1; i++)
+      {
+        Console.WriteLine(vector[i]);
+      }
+    }
+    return vector;
+}
+
+double[] GetDiagonalSecundaria(double[,] matriz)
+{
+    int i;
+    int cant = matriz.Length;
+    double[] vector = new double[cant];
+    if((cant % 2) == 0)
+    {
+      int limite = cant / 2;
+      for(i=0 ; i<= limite-1 ; i--)
+      {
+        vector[i] = matriz[limite -i, limite - i];
+      }
+
+        for(i=0 ; i<= (cant/2) - 1; i++)
+        {
+        Console.WriteLine(vector[i]);
+        }
+
+    }
+    else
+    {
+        int limite = (int)Math.Sqrt(cant);
+        for(i= 0 ; i>= (limite-1) ; i--)
+        {
+            vector[i] = matriz[limite - i, limite - i];
+        }
+
+      for(i=0 ; i<= (Math.Sqrt(cant)) - 1; i++)
+      {
+        Console.WriteLine(vector[i]);
+      }
+    }
+
+    return vector;
+}
+
+
+
+void esSimetrica(int x , int y)
+{
+    if(x != y)
+    {
+        throw new Exception("No es cuadrada");
+    }
+}
+
+*/

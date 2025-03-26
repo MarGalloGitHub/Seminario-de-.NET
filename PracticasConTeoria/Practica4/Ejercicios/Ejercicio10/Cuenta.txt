@@ -1,0 +1,59 @@
+namespace PRACTICA4;
+
+class Cuenta
+{
+     private double _monto;
+     private int _titularDNI;
+    private string? _titularNobre;
+    
+    public Cuenta()
+    {
+        _monto = 0;
+        _titularDNI = 0;
+        _titularNobre = "No especificado";
+    }
+
+    public Cuenta(int dni) : this()     //usa el de arriba, como super
+    {
+        _titularDNI = dni;
+    }
+
+    public Cuenta(string? xString): this()
+    {
+        _titularNobre = xString;
+    }
+
+    public Cuenta(string? xString , int dni): this()
+    {
+         _titularNobre = xString;
+        _titularDNI = dni;
+    }
+    
+
+    public void Imprimir()
+    {
+        string aux = $"Nombre:  {_titularNobre} , DNI:  {_titularDNI} , Monto:  {_monto} ";
+        Console.WriteLine(aux);
+    }
+
+    public void Depositar(int monto)
+    {
+        _monto = monto;
+    }
+
+    public double Extraer(double monto)
+    {
+        double aux = 0;
+        if(monto < _monto)
+        {
+            _monto -= monto;
+            aux = _monto;
+        }
+        else
+        {
+            Console.WriteLine("Operacion cancelada, monto insuficiente");
+        }
+        return aux;
+    }
+}
+    

@@ -1,0 +1,33 @@
+using PRACTICA4;
+
+double a = 1;
+double b= -2;
+double c = 1;
+
+Ecuacion2 ecu1 = new Ecuacion2(a,b,c);
+Console.WriteLine(ecu1.ImprimirRaices());
+
+a = 2;
+b = 2;
+c = 2;
+
+ecu1 = new Ecuacion2(a,b,c);
+Console.WriteLine(ecu1.ImprimirRaices());
+a = 3;
+b = 3;
+c = 3;
+
+ecu1 = new Ecuacion2(a,b,c);
+Console.WriteLine(ecu1.ImprimirRaices());
+a = 4;
+b = 4;
+c = 4;
+
+ecu1 = new Ecuacion2(a,b,c);
+Console.WriteLine(ecu1.ImprimirRaices());
+a = 5;
+b = 5;
+c = 5;
+
+ecu1 = new Ecuacion2(a,b,c);
+Console.WriteLine(ecu1.ImprimirRaices());

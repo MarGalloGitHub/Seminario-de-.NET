@@ -1,0 +1,185 @@
+/*
+6) Implementar los siguientes métodos que devuelvan la suma, resta y multiplicación de matrices 
+pasadas como parámetros. Para el caso de la suma y la resta, las matrices deben ser del mismo tamaño, 
+en caso de no serlo devolver null. Para el caso de la multiplicación la cantidad de columnas de A debe 
+ser igual a la cantidad de filas de B, en caso contrario generar una excepción ArgumentException.
+
+double[,]? Suma(double[,] A, double[,] B)
+double[,]? Resta(double[,] A, double[,] B)
+double[,] Multiplicacion(double[,] A, double[,] B)
+
+
+
+using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
+
+
+Console.WriteLine("cargue la priemra matriz");
+
+Console.WriteLine("Escriba cantidad de filas de la primera matriz");
+    string valorF = Console.ReadLine();
+    int f = int.Parse(valorF);
+Console.WriteLine("Escriba cantidad de columnas de la primera matriz");
+    string valorC = Console.ReadLine();
+    int c = int.Parse(valorC);
+
+double[,] A = new double[f,c];
+cargarMatriz(ref A,f,c);
+
+
+Console.WriteLine("cargue la segunda matriz");
+
+Console.WriteLine("Escriba cantidad de filas de la segunda  matriz");
+    string valorF2 = Console.ReadLine();
+    int f2 = int.Parse(valorF2);
+Console.WriteLine("Escriba cantidad de columnas de la tercera matriz1");
+    string valorC2 = Console.ReadLine();
+    int c2 = int.Parse(valorC2);
+
+double[,] B = new double[f2,c2];
+cargarMatriz(ref B,f2,c2);
+
+
+Console.WriteLine("cargue la tercera matriz");
+Console.WriteLine("Escriba cantidad de filas de la matriz1");
+    string valorF3 = Console.ReadLine();
+    int f3 = int.Parse(valorF3);
+Console.WriteLine("Escriba cantidad de columnas de la matriz1");
+    string valorC3 = Console.ReadLine();
+    int c3 = int.Parse(valorC3);
+
+double[,] C = new double[f2,c2];
+cargarMatriz(ref C,f3,c3);
+
+
+double[,]? result1 = Suma(A,B);
+mostrarMatriz(result1);
+double[,]? result2 = Suma(A,C);
+mostrarMatriz(result2);
+double[,]? result3 = Suma(B,C);
+mostrarMatriz(result3);
+
+double[,]? result4 = Resta(A,B);
+mostrarMatriz(result4);
+double[,]? result5 = Resta(A,C);
+mostrarMatriz(result5);
+double[,]? result6 = Resta(B,C);
+mostrarMatriz(result6);
+
+double[,]? result7 = Multiplicacion(A,B);
+mostrarMatriz(result7);
+double[,]? result8 = Multiplicacion(A,C);
+mostrarMatriz(result8);
+double[,]? result9 = Multiplicacion(B,C);
+mostrarMatriz(result9);
+
+
+double[,]? Suma(double[,] A, double[,] B )
+{
+    double[,]? aux;    //misma cantidad de filas y de columnas
+    if((A.GetLength(0) == B.GetLength(0)) && (A.GetLength(1) == B.GetLength(1))) 
+        {
+            aux = new double[A.GetLength(0),B.GetLength(1)];
+            int cantElem = A.Length;
+            int i;
+            int j;
+            for(i=0 ; i<= (A.GetLength(0)) -1  ; i++ )
+            {
+                for(j = 0 ; j<= (A.GetLength(1)) - 1 ; j++)
+                {
+                    aux[i,j] = A[i,j] + B[i,j];
+                }
+            }
+        }
+    else
+        {
+            aux = null;
+        }
+    return aux;
+}
+
+double[,]? Resta(double[,] A, double[,] B )
+{
+    double[,]? aux;    //misma cantidad de filas y de columnas
+    if((A.GetLength(0) == B.GetLength(0)) && (A.GetLength(1) == B.GetLength(1))) 
+        {
+            aux = new double[A.GetLength(0),B.GetLength(1)];
+            int cantElem = A.Length;
+            int i;
+            int j;
+            for(i=0 ; i<= (A.GetLength(0)) -1  ; i++ )
+            {
+                for(j = 0 ; j<= (A.GetLength(1)) - 1 ; j++)
+                {
+                    aux[i,j] = A[i,j] - B[i,j];
+                }
+            }
+        }
+    else
+        {
+            aux = null;
+        }
+    return aux;
+}
+
+double[,]? Multiplicacion(double[,] A, double[,] B )
+{
+    double[,]? aux;    //misma cantidad de filas y de columnas
+    if((A.GetLength(0) == B.GetLength(0)) && (A.GetLength(1) == B.GetLength(1))) 
+        {
+            aux = new double[A.GetLength(0),B.GetLength(1)];
+            int cantElem = A.Length;
+            int i;
+            int j;
+            for(i=0 ; i<= (A.GetLength(0)) -1  ; i++ )
+            {
+                for(j = 0 ; j<= (A.GetLength(1)) - 1 ; j++)
+                {
+                    aux[i,j] = A[i,j] * B[i,j];
+                }
+            }
+         }
+    else
+        {
+            aux = null;
+        }
+    return aux;
+}
+
+void cargarMatriz(ref double[,]matriz , int f, int c)
+{
+    int cantElem = f*c;
+    int i;
+    int j;
+    for(i=0 ; i<= (matriz.GetLength(0)) -1  ; i++ )
+    {
+        for(j = 0 ; j<= (matriz.GetLength(1)) - 1 ; j++)
+        {
+            matriz[i,j] = i;
+        }
+    }
+}
+
+void mostrarMatriz(double[,] matriz)
+{
+    if(matriz != null)
+    {
+        int i;
+        int j;
+        for(i=0 ; i<= (matriz.GetLength(0)) -1  ; i++ )
+        {
+            for(j = 0 ; j<= (matriz.GetLength(1)) - 1 ; j++)
+            {
+                Console.WriteLine(matriz[i,j]);
+            }
+        }
+    }
+    else
+        {
+            Console.WriteLine("matriz nula");
+        }
+}
+
+
+
+*/

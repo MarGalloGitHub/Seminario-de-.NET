@@ -1,0 +1,20 @@
+namespace Figuras;
+
+public class Rectangulo
+{
+    private double _lado1;
+    private double _lado2;
+
+    public Rectangulo(double lado1 , double lado2)
+    {
+        _lado1 = lado1;
+        _lado2 = lado2;
+    }
+
+    public string GetArea()
+    {
+        string aux = $" Area del Rectangulo:  {_lado1 * _lado2}";
+
+        return aux;
+    }
+}

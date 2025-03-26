@@ -1,0 +1,32 @@
+/*
+2) Implementar un método para imprimir por consola todos los elementos de una matriz (arreglo de dos 
+dimensiones) pasada como parámetro. Debe imprimir todos los elementos de una fila en la misma línea 
+en la consola. 
+
+void ImprimirMatriz(double[,] matriz
+Ayuda: Si A es un arreglo, A.GetLength(i) devuelve la longitud del arreglo en la dimensión i.
+
+
+
+using System.Globalization;
+
+int [,] matriz = new int[4,3];
+
+int i;
+for(i=0 ; i<= 11 ; i++){             //cantidad de elementos menos 1
+    Console.WriteLine("Escriba un numero");
+    string x = Console.ReadLine();
+    int num = int.Parse(x);
+    matriz[i / 3 , i%3] = num;   //divido por cantidad de columnas
+}
+ImprimirMatriz(matriz);
+
+void ImprimirMatriz(int[,] matriz)
+{
+    int i;
+    int valor;
+    for(i=0 ; i<= 11 ; i++){
+        valor = matriz[i/3 , i%3];   
+        Console.WriteLine(valor);
+    }
+}

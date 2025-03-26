@@ -1,0 +1,48 @@
+/*
+Auto a = new Auto();
+a.Marca = "Ford";
+Console.WriteLine(a.Marca);
+
+ class Auto
+ {
+    private string marca;
+    public string Marca
+    {
+        set
+            {
+                Marca = value;                  stack overflow , deberia cambiar Marca por marca, pero mejor usar _marca en ambos
+                                                _ para variables privadas y _S para privadas estaticas
+            }
+        get
+            {
+                return marca;
+            }
+    }  
+ }
+
+
+
+ Asi esta mejor:
+
+ 
+
+     Auto a = new Auto();
+a.Marca = "Ford";
+Console.WriteLine(a.Marca);
+
+ class Auto
+ {
+    private string _marca;
+    public string Marca
+    {
+        set
+            {
+                _marca = value;                  
+            }
+        get
+            {
+                return _marca;
+            }
+    }  
+ }
+ */

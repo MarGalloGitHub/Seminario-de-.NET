@@ -1,0 +1,81 @@
+/*
+14) Utilizar la clase Queue<T> para implementar un programa que realice el cifrado de un texto 
+aplicando la técnica de clave repetitiva. La técnica de clave repetitiva consiste en desplazar un carácter 
+una cantidad constante de acuerdo a la lista de valores que se encuentra en la clave. Por ejemplo: para 
+la siguiente tabla de caracteres:
+
+Mirar tabla de practica
+
+A cada carácter del mensaje original se le suma la cantidad indicada en la clave. En el caso que la suma 
+fuese mayor que 28 se debe volver a contar desde el principio, Implementar una cola con los números 
+de la clave encolados y a medida que se desencolen para utilizarlos en el cifrado, se vuelvan a encolar 
+para su posterior utilización. Programar un método para cifrar y otro para descifrar.
+*/
+
+using System.Collections;
+using System.Diagnostics.Contracts;
+using System.Text;
+using System.Threading.Tasks.Sources;
+
+Queue<Char>  cola = new Queue <Char>();
+Queue <int> colaClave = new Queue <int>();
+
+int contra = 7935;
+while(contra != 0)
+{
+    int num = contra % 10;
+    colaClave.Enqueue(num);
+    contra = contra / 10;
+}
+
+string texto = "HOLA MUNDO";
+int i = 0;
+foreach(Char letra in texto)   //cargar cola
+{   
+    Char c = texto[i];
+    cola.Enqueue(c);
+    i++;
+} 
+
+for(i=0 ; i<= (texto.Length -1) ; i++)
+{
+    int valor = cola.Dequeue();
+    valor-= 64;
+    int num = colaClave.Dequeue();
+    valor += num;
+    if(valor >=30)
+    {
+        valor++;
+    }
+    if(valor > 28)
+    {
+        valor -= 28;
+    }
+    else
+        if(valor >= 21)
+        {
+            valor --;
+        }
+        else
+            if(valor == 16)
+            {
+                valor--;
+            }
+            else
+                if(valor == -27)
+                {
+                    valor = 5;
+                }
+
+
+
+    colaClave.Enqueue(num);
+    valor+= 64;
+    Char vNuevo = Convert.ToChar(valor);
+    cola.Enqueue(vNuevo);
+}
+
+for(i=0 ; i<= (texto.Length -1) ; i++)
+{
+    Console.WriteLine(cola.Dequeue());
+}

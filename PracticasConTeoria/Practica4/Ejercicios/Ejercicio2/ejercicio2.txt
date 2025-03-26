@@ -1,0 +1,23 @@
+using PRACTICA4;
+
+
+Persona p;
+
+List<Persona> lista = new List<Persona>();
+
+int i;
+
+
+for(i=0 ; i < 4 ; i++){
+    Console.WriteLine("Escriba el nombre, edad y dni de la persona , en ese orden");
+     p = new Persona( Console.ReadLine() , int.Parse(Console.ReadLine()) , int.Parse(Console.ReadLine() ));
+    lista.Add(p);
+}
+i = 0;
+
+foreach(Persona per in lista)
+{   
+    p = lista[i];
+    Console.WriteLine(p.imprimir());
+    i++;
+}

@@ -1,0 +1,30 @@
+using PRACTICA4;
+
+
+Persona p;
+
+List<Persona> lista = new List<Persona>();
+
+int i;
+
+int e;
+int dni;
+
+for(i=0 ; i < 4 ; i++){
+    p = new Persona();
+    Console.WriteLine("Escriba el nombre de la persona");
+    p.nombre = Console.ReadLine();
+    Console.WriteLine("Escriba la edad de la persona");
+    p.edad = int.Parse(Console.ReadLine());
+     Console.WriteLine("Escriba el dni de la persona");
+    p.dni = int.Parse(Console.ReadLine());
+    lista.Add(p);
+}
+i = 0;
+
+foreach(Persona per in lista)
+{   
+    p = lista[i];
+    Console.WriteLine($"Persona{p.nombre,5}{p.edad,5}{p.dni,5}");
+    i++;
+}

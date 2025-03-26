@@ -1,0 +1,18 @@
+/*
+4) Indicar en cada caso si la definición de la clase A es correcta, en caso de no serlo detallar cuál es el 
+error. 
+
+A) deberia estar bien
+B) Aca preguntar, porque se supone que un constructor sin modificador de acceso es privado por default
+C) un constructor estatico no debe recibir parametros + lo anterior
+D) deberia estar bien
+E) ? Hay un error en cuanto a la asignacion en el segundo constructor(?)
+F) Preguntar el orden del codigo, mas que nada por el ultimo constructor ()
+G) Deberia estar bien
+H) El compilador no puede acceder a una variable
+I) Deberia estar bien
+J) Una variable readonly solo puede asignarse varias veces si es en un constructor
+K) Deberia estar bien
+L) No se pueden definir indizadores estaticos
+
+*/

@@ -1,0 +1,26 @@
+namespace Automotores;
+
+public class Auto
+{
+    private string _marca;
+    private int _modelo;
+
+    public Auto(string marca)
+    {
+        _marca = marca;
+        _modelo = 2022;
+    }
+
+
+    public Auto(string marca , int modelo )
+    {
+        _modelo = modelo;
+        _marca = marca;
+    }
+
+    public string GetDescripcion()
+    {
+        string aux = $" Auto    {_marca}    {_modelo}";
+        return aux;
+    }
+}

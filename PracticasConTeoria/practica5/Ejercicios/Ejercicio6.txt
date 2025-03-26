@@ -1,0 +1,256 @@
+/*
+public double this[int fila , int columna]                                          //esto para preguntar
+    {
+        get
+        {
+            double aux = 0;
+            if((fila - 1 <= _filas)  && (columna - 1 <= _columnas ))
+            {
+                aux = _matriz[(fila - 1)  , (columna - 1) ];
+                return aux;
+            }
+            else
+            {
+                Console.WriteLine("Posicion invalida");
+            }
+            return aux;
+        }
+        set
+        {
+            if((fila -1  <= _filas) && (columna - 1 <= _columnas ))
+            {
+                this._matriz[fila - 1 ,columna - 1] = value;
+                Console.WriteLine("Si se pudo");
+            }
+            else
+            {
+                Console.WriteLine("Posicion invalida");
+            }
+        }
+    }
+
+
+namespace TEORIA5;
+public class Matriz
+{
+    private int _filas;
+    private int _columnas;
+    private double[,] _matriz;
+    public Matriz(int filas , int columnas)
+    {
+        _filas = filas;
+        _columnas = columnas;
+
+        double[,] matriz = new double[filas , columnas];
+        _matriz = matriz;
+
+        int i= 0;
+        int j= 0;
+        for(i=0 ; i<= (_filas -1) ; i++)
+        {
+            for(j=0 ; j<= (_columnas - 1) ; j++)
+            {
+                _matriz[i,j] = 0;
+            }
+        }
+    }
+
+    public Matriz(double[,] matriz)
+    {
+        _matriz = matriz;
+        _filas = matriz.GetLength(0); //cant filas
+        _columnas = matriz.GetLength(1);  //cant columnas
+        
+    }
+
+ 
+    public double this[int fila , int columna]                                          //esto para preguntar
+    {
+        get
+        {
+            double aux = 0;
+            if((fila - 1 <= _filas)  && (columna - 1 <= _columnas ))
+            {
+                aux = _matriz[(fila - 1)  , (columna - 1) ];
+                return aux;
+            }
+            else
+            {
+                Console.WriteLine("Posicion invalida");
+            }
+            return aux;
+        }
+        set
+        {
+            if((fila -1  <= _filas) && (columna - 1 <= _columnas ))
+            {
+                this._matriz[fila - 1 ,columna - 1] = value;
+                Console.WriteLine("Si se pudo");
+            }
+            else
+            {
+                Console.WriteLine("Posicion invalida");
+            }
+        }
+    }
+  
+
+    public void imprimir()
+    {
+        int i;
+        int j;
+        for(i=0 ; i<= (_filas - 1) ; i++)
+        {
+            for(j=0 ; j<= (_columnas - 1) ; j++){
+                Console.WriteLine(_matriz[i,j]);
+            }
+        }
+    }
+
+    public void imprimir(String frase)
+    {
+        String aux = frase;
+        int i;
+        int j;
+        for(i=0 ; i<= (_filas - 1) ; i++)
+        {
+            for(j=0 ; j<= (_columnas - 1) ; j++){
+                aux +=  _matriz[i,j] + " -- ";
+            }
+        }
+        Console.WriteLine(aux);
+    }
+
+    public double[] GetFila(int fila){
+        double[]? aux = null;
+        int i;
+        if(fila <= (_filas - 1))
+        {
+            Console.WriteLine("Si funco");
+            aux = new double[_columnas];
+            for(i= 0 ; i <= (_columnas - 1) ; i++)
+            {
+                aux[i] = _matriz[fila,i];
+            }
+        }
+        else
+            {
+                Console.WriteLine("No funco");
+            }
+
+        return aux;
+    }
+
+    public double[] GetColumna(int columna)
+    {
+        double[]? aux = null;
+        int i;
+        if(columna <= (_columnas - 1))
+        {
+            Console.WriteLine("Si funco");
+            aux = new double[_filas];
+            for(i= 0 ; i <= (_filas - 1) ; i++)
+            {
+                aux[i] = _matriz[i,columna];
+            }
+        }
+        else
+            {
+                Console.WriteLine("No funco");
+            }
+
+        return aux;
+    }
+
+    public double[] GetDiagonalPrincipal()
+    {
+        double[] aux = new double[_filas];
+        int i;
+        int j=0;
+        for(i=0 ; i<=(_filas -1) ; i++)
+        {
+            aux[i] = _matriz[i,j];
+            j++;
+        }
+        return aux;
+    }
+
+     public double[] GetDiagonalSecundaria()
+    {
+        double[] aux = new double[_filas];
+        int i=0;
+        int j = (_filas -1);
+        while(j >= 0)
+        {
+            aux[i] = _matriz[i,j];
+            i++;
+            j--;
+        }
+        return aux;
+    }
+
+    public double[][] GetArregloDeArreglo()
+    {
+        double[][] aux = { new double[_filas] , new double[_columnas]};
+        return aux;
+    }
+
+    public void sumarle(Matriz m2)
+    {
+        if ((m2._filas == _filas) && (m2._columnas == _columnas))
+        {
+            int i;
+            int j;
+            for(i = 0 ; i<= (_filas -1 ) ; i++)
+            {
+                for(j=0 ; j<= (_columnas - 1) ; j++)
+                {
+                    _matriz[i,j] += m2._matriz[i,j]; 
+                }
+            }
+        }
+        else{
+            Console.WriteLine("No se puede hacer operacion porque son distintas");
+        }
+    }
+
+    public void restarle(Matriz m2)
+    {
+        if ((m2._filas == _filas) && (m2._columnas == _columnas))
+        {
+            int i;
+            int j;
+            for(i = 0 ; i<= (_filas -1 ) ; i++)
+            {
+                for(j=0 ; j<= (_columnas - 1) ; j++)
+                {
+                    _matriz[i,j] -= m2._matriz[i,j]; 
+                }
+            }
+        }
+        else{
+            Console.WriteLine("No se puede hacer operacion porque son distintas");
+        }
+    }
+
+    public void multiplicarPor(Matriz m2)
+    {
+        if ((m2._filas == _filas) && (m2._columnas == _columnas))
+        {
+            int i;
+            int j;
+            for(i = 0 ; i<= (_filas -1 ) ; i++)
+            {
+                for(j=0 ; j<= (_columnas - 1) ; j++)
+                {
+                    _matriz[i,j] *= m2._matriz[i,j]; 
+                }
+            }
+        }
+        else{
+            Console.WriteLine("No se puede hacer operacion porque son distintas");
+        }
+    }
+}
+
+*/

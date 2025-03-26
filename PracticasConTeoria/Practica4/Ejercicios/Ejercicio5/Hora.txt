@@ -1,0 +1,67 @@
+namespace PRACTICA4;
+
+public class Hora
+{
+    private int _horas;
+    private int _minutos;
+    private int _segundos;
+    
+    public Hora(int horas , int minutos , int segundos)
+    {
+        _horas = horas;
+        _minutos = minutos;
+        _segundos = segundos;
+    }
+    public Hora(double num)
+    {
+         double numero = num;
+         int i = Convert.ToInt32(numero);  //con esto saco la parte entera
+         _horas  = i;
+
+         double num2 = num - i;
+         while(num2 < 1)
+         {
+            num2 = num2 * 10;               // con esto los minutos
+         }
+         double num3 = num2 * 6; 
+ 
+
+         int j = Convert.ToInt32(num3);
+
+
+         num3 = num3 - (j-1) ;             //sacar segundos
+  
+
+         while(num3 < 100)
+         {
+            num3 = num3 * 10;
+         }
+  
+         int k = Convert.ToInt32(num3);
+        
+         int extra;
+         while(k > 60)
+         {
+            extra = 0;
+            while((k >60) && (extra != 60))
+            {
+                k = k - 60;
+                extra++;
+            }
+            if(extra == 60)
+            {
+                j++;
+            }
+         }
+
+
+         _minutos = j - 1;
+         _segundos = k;
+    }
+
+    public void Imprimir()
+    {
+        Console.WriteLine( $"{_horas,-3}horas , {_minutos,3} minutos, {_segundos,3} segundos ");
+    }
+    
+}

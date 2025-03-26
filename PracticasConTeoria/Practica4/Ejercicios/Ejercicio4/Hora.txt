@@ -1,0 +1,20 @@
+namespace PRACTICA4;
+
+public class Hora
+{
+    private int _horas;
+    private int _minutos;
+    private int _segundos;
+
+    public Hora(int horas , int minutos , int segundos)
+    {
+        _horas = horas;
+        _minutos = minutos;
+        _segundos = segundos;
+    }
+
+    public void Imprimir()
+    {
+        Console.WriteLine( $"{_horas,-3}horas , {_minutos,3} minutos, {_segundos,3} segundos ");
+    }
+}

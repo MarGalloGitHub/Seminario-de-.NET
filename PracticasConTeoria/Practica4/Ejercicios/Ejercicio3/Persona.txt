@@ -1,0 +1,39 @@
+namespace PRACTICA4;
+
+public class Persona
+{
+    private String _nombre;
+    private int _edad;
+    private int _dni;
+
+    public Persona(String nombre , int edad , int dni)
+    {
+        _nombre = nombre;
+        _edad = edad;
+        _dni = dni;
+    }
+
+    public string imprimir()
+    {
+        return $"{_nombre,5}{_edad,5}{_dni,5}";
+    }
+
+    public bool EsMayorQue(Persona x)
+    {
+        bool aux = false;
+        if(this._edad > x._edad)
+        {
+            aux = true;
+        }
+        return aux;
+    }
+
+
+
+    /*
+    public string imprimir() =>
+    {
+         $"Persona{_nombre,5}{_edad,5}{_dni,5}";
+    }
+    */
+}

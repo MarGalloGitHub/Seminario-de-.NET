@@ -1,0 +1,43 @@
+/*
+5) Qué líneas del código siguiente provocan error de compilación? Analizar cuándo es posible acceder a 
+miembros estáticos y de instancia.
+
+
+class A
+{
+ char c;
+ static string st;
+ void metodo1()
+ {
+ st = "string";
+ c = 'A';
+ }
+ static void metodo2()
+ {
+ new ClaseA().c = 'a';
+ st = "st2";
+ c = 'B';
+ new A().st = "otro string";
+ }
+}
+
+
+class A
+{
+ char c;
+ static string st;
+ void metodo1()
+ {
+ st = "string";
+ c = 'A';
+ }
+ static void metodo2()
+ {
+ new A().c = 'a';
+ A.st = "st2";                           aun no fue declarada, falta A.st
+ c = 'B';                                falta la referncia a A
+ new A().st = "otro string";             No se puede acceder a st a traves de una instancia
+ }
+}
+
+*/

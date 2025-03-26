@@ -1,0 +1,17 @@
+namespace Figuras;
+
+public class Circulo
+{
+    private double _radio;
+
+    public Circulo(double radio)
+    {
+        _radio = radio;
+    }
+
+    public string GetArea()
+    {
+        string aux = $" Area del circulo:  {3.14 * (_radio * _radio)}";
+        return aux;
+    }
+}

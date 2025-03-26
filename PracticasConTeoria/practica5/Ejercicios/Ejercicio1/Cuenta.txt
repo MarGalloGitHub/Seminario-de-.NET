@@ -1,0 +1,74 @@
+/*
+namespace TEORIA5;
+
+class Cuenta
+{
+    private int _saldo = 0;
+
+    private int _numCuenta = 0;
+    private static int S_saldo =  0;
+    private static int S_id = 0;
+
+    private static int S_cantCuentasCreadas = 0;
+
+    private static int S_cantDepositos = 0;
+
+    private static int S_totalDepositado = 0;
+
+    private static int S_extracciones = 0;
+
+    private static int S_totalExtraido = 0;
+
+    private static int S_cantExtraccionesFallidas = 0;
+    
+     static Cuenta()
+    {
+     
+    }
+    public Cuenta()
+    {
+        S_id += 1;
+        Console.WriteLine("Se creo la cuenta: Id*" + S_id);
+        S_cantCuentasCreadas += 1;
+        _numCuenta = S_id;
+    }
+    public Cuenta Depositar(int num)
+    {
+       _saldo += num;
+       S_saldo += num;
+       Console.WriteLine("Se deposito:  " + num + "  en la cuenta " + S_id + " (Saldo x " + _saldo + ")");
+        S_cantDepositos += 1;
+        S_totalDepositado += num;
+        return this;
+    }
+
+    public Cuenta Extraer(int num)
+    {
+        if(num <= _saldo)
+        {
+            _saldo -= num;
+            S_saldo -= num;
+            Console.WriteLine("Se extrajo: " + num + " de la cuenta" + _numCuenta + " (Saldo x " + _saldo + ")");
+            S_extracciones += 1;
+            S_totalExtraido+= num;
+        }
+        else
+        {
+            Console.WriteLine("Operacion denegada  --   Saldo insuficiente");
+            S_cantExtraccionesFallidas += 1;
+        }
+        return this;
+    }
+
+    public static void ImprimirDetalle()
+    {
+        Console.WriteLine("Cuentas creadas : " + S_cantCuentasCreadas);
+        Console.WriteLine("Depositos : " + S_cantDepositos);
+        Console.WriteLine("Extracciones: " + S_extracciones);
+        Console.WriteLine("- Total depositado : " + S_totalDepositado);
+        Console.WriteLine("- Total extraido : " + S_totalExtraido);
+        Console.WriteLine("- Saldo: " + S_saldo);
+        Console.WriteLine("Se denegaron " + S_cantExtraccionesFallidas  + "   extracciones a falta de fondos");
+    }
+}
+*/

@@ -1,0 +1,80 @@
+using PRACTICA4;
+
+/*
+Matriz matriz = new Matriz(2,3);
+matriz.setElemento(1,2,5);
+double aux = matriz.getElemento(1,2);
+Console.WriteLine(aux);
+matriz.imprimir();
+matriz.imprimir("Numeros de la matriz: ");
+double[] filaY = matriz.GetFila(2);
+
+double[,] matriz2 = new double[4,4];
+
+Matriz matriz3 = new Matriz(matriz2);
+matriz3.setElemento(2,3,9);
+aux = matriz3.getElemento(2,3);
+Console.WriteLine(aux);
+matriz3.imprimir();
+matriz3.imprimir("Numeros de la matriz: ");
+double[] filaX = matriz3.GetFila(1);
+int filaElementos = filaX.Length;
+Console.WriteLine("Ahora la fila");
+for(int i = 0 ; i<= (filaElementos - 1) ; i++)
+{
+    Console.WriteLine(filaX[i]);
+}
+double[]filaXc = matriz3.GetColumna(2);
+filaElementos = filaX.Length;
+Console.WriteLine("Ahora la columna");
+for(int i = 0 ; i<= (filaElementos - 1) ; i++)
+{
+    Console.WriteLine(filaX[i]);
+}
+
+*/
+/*
+double[,] mNueva = new double[5,5];
+
+for(int i=0 ; i<= 4 ; i++)
+{
+    for(int j=0 ; j<= 4 ; j++)
+    {
+        mNueva[i,j] = j;
+    }
+}
+
+Matriz matrizDiag = new Matriz(mNueva);
+double[] restoDiag = matrizDiag.GetDiagonalPrincipal();
+int elemen = restoDiag.Length;
+
+for(int i=0 ; i<= (elemen-1) ; i++)
+{
+    Console.WriteLine(restoDiag[i]);
+}
+
+Console.WriteLine("La segunda");
+double[]restoDiag2 = matrizDiag.GetDiagonalSecundaria();
+
+int valor = restoDiag2.Length;
+for(int i = 0 ; i<= valor - 1 ; i++)
+{
+    Console.WriteLine(restoDiag2[i]);
+}
+*/
+
+double[,] mNueva = new double[5,5];
+
+for(int i=0 ; i<= 4 ; i++)
+{
+    for(int j=0 ; j<= 4 ; j++)
+    {
+        mNueva[i,j] = j;
+    }
+}
+
+/*
+Matriz matrizDiag = new Matriz(mNueva);
+
+double[][] arregloAlCuadrado = matrizDiag.GetArregloDeArreglo();
+*/

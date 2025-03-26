@@ -1,0 +1,14 @@
+/*
+11) Señalar errores de ejecución en el siguiente código
+
+List<int> a = [ 1, 2, 3, 4 ];
+ a.Remove(5);
+ a.RemoveAt(4)
+ 
+
+
+List<int> a = [ 1, 2, 3, 4 ];
+ a.Remove(3);  // este remueve el valor especifico
+ a.RemoveAt(1);  // este remueve en una posicion, teniendo en cuenta que comienzan en 0
+
+ */
