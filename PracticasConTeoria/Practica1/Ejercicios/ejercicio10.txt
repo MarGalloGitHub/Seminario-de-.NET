@@ -1,0 +1,34 @@
+/*
+10) Escribir un programa que imprima en la consola todos los múltiplos de 17 o de 29 comprendidos 
+entre 1 y 1000.
+
+
+Console.WriteLine("primero los multiplos de 17");
+int i = 1;
+int multi17 = 17;
+int multi29 = 29;
+int valor = 0;
+
+while(valor <= 1000)
+{
+valor = multi17 * i;
+if(valor < 1000) 
+{
+    Console.WriteLine(valor);
+}
+i++;
+}
+
+Console.WriteLine("segundo los multiplos de 29");
+valor = 0;
+i = 1;
+while(valor <= 1000)
+{
+valor = multi29 * i;
+if(valor < 1000) 
+{
+    Console.WriteLine(valor);
+}
+i++;
+}
+*/

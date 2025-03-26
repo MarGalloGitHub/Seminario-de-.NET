@@ -1,0 +1,20 @@
+/*
+1) Sea el siguiente código: 
+
+    object o1 = "A";
+    object o2 = o1;
+    o2 = "Z";
+    Console.WriteLine(o1 + " " + o2);
+
+
+El tipo object es un tipo referencia, por lo tanto luego de la sentencia o2 = o1 ambas variables están 
+apuntando a la misma dirección. ¿Cómo explica entonces que el resultado en la consola no sea “Z Z”?
+
+
+    object o1 = "A";
+    object o2 = o1;
+    o2 = "Z";
+    Console.WriteLine(o1 + " " + o2);
+// el resultado mo es Z Z debido a que cambia la referencia de o2 al hacer una asignacion (cambia el valor en la heap y la direccion en la pila).
+
+*/

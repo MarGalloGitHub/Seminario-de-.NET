@@ -1,0 +1,22 @@
+/*
+Escribir un programa que solicite al usuario ingresar su nombre e imprima en la consola un saludo 
+personalizado utilizando ese nombre o la frase “Hola mundo” si el usuario ingresó una línea en blanco. 
+Para ingresar un string desde el teclado utilizar Console.ReadLine()
+
+
+
+using System.Security.Cryptography;
+using System.Text;
+
+Console.WriteLine("por favor ingrese su nombre");
+String str = Console.ReadLine();
+
+if(str == "")
+{
+    Console.WriteLine("Hola mundo");
+}
+else
+{
+    Console.WriteLine("Que onda, como va  " + str + "?");
+}
+*/

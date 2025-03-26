@@ -1,0 +1,12 @@
+/*
+6) Supongamos que Program.cs sólo tiene las siguientes dos líneas:
+int i;
+Console.WriteLine(i);
+
+¿Por qué no compila? Porque no tiene ningun valor asignado dumbass
+
+
+int i = 0;
+Console.WriteLine(i);
+
+*/

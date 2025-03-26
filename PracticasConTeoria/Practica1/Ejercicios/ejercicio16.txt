@@ -1,0 +1,16 @@
+
+// 16) Analizar el siguiente código. ¿Cuál es la salida por consola?
+/*
+int i = 1;
+ if (--i == 0)   primero resta y despues compara
+ {
+ Console.WriteLine("cero");
+ }
+ if (i++ == 0)    primero hace la comparacion y despues aumenta
+ {
+ Console.WriteLine("cero");
+ }
+ Console.WriteLine(i);  devuelve 1
+
+
+*/

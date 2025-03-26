@@ -1,0 +1,16 @@
+/*
+ Resolver los errores de compilación en el siguiente fragmento de código. Utilizar el operador as
+cuando sea posible.  as para valores que pueden ser nulos
+
+
+object o = "Hola Mundo!";
+string? st =  o as string; {}
+int i = 12;
+byte b = (byte)i; {}
+double d = i;
+float f = (float) d; {}
+o =  i;
+i = (int)o + 1; {}
+
+
+*/

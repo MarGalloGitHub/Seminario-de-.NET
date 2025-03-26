@@ -1,0 +1,56 @@
+/*
+18) Escribir una función (método int Fac(int n)) que calcule el factorial de un número n pasado al 
+programa como parámetro por la línea de comando
+a) Definiendo una función no recursiva
+b) Definiendo una función recursiva
+c) idem a b) pero con expression-bodied methods (Tip: utilizar el operador condicional ternario)
+
+
+using System.Runtime.InteropServices;
+
+Console.WriteLine("escriba un numero para sacar su factorial");
+string x = Console.ReadLine();
+int n = int.Parse(x);
+
+Console.WriteLine("El factorial de : " + n + ", es :  " + Fac(n));
+
+Console.WriteLine("El factorial de : " + n + ", con la segunda cuenta es :  " + Fac2(n));
+
+Console.WriteLine("El factorial de : " + n + ", con la segunda cuenta es :  " + Fac3(n));
+
+int Fac(int n)
+{
+    int resultado = 1;
+    int i;
+    for (i = 1 ; i <= n ; i++)
+    {
+        resultado = (resultado * i);
+    }
+    return resultado;
+}
+
+int Fac2(int n)
+{
+    int resultado = 1;
+    if(n > 0)
+    {
+        resultado *= n; 
+        Console.WriteLine(n);
+        return (resultado * Fac2(n-1));
+    }
+    return resultado;
+}
+
+int Fac3(int n)
+{
+    int resultado = 1;
+    if(n > 0)
+    {
+        resultado *= n; 
+        Console.WriteLine(n);
+        return (resultado * Fac2(n-1));
+    }
+    return resultado;
+}
+
+*/

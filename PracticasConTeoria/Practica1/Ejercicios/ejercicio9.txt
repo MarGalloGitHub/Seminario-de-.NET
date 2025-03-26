@@ -1,0 +1,32 @@
+/*
+9)Escribir un programa que lea dos palabras separadas por un blanco que terminan con <ENTER>, y 
+determinar si son simétricas (Ej: 'abbccd' y 'dccbba' son simétricas). 
+Tip: si st es un string, entonces st[0] devuelve el primer carácter de st, y st[st.Length-1]
+devuelve el último carácter de st.
+*/
+Console.WriteLine("escriba una palabra");
+string palabra1 = Console.ReadLine();
+Console.WriteLine("escriba otra palabra");
+string palabra2 = Console.ReadLine();
+Boolean simetricas = true;
+
+if(palabra1.Length == palabra2.Length)
+{
+    int x = palabra1.Length;
+    int i;
+    for( i = 0; i<= (x - 1)   ; i++)
+    {
+        if((palabra1[i] != palabra2[palabra2.Length - (i+1)]))
+        {
+            simetricas = false;
+        }
+    }
+}
+if((palabra1.Length != palabra2.Length) || (simetricas == false))
+{
+    Console.WriteLine("no son simetricas");
+}
+else
+{
+    Console.WriteLine("Son simetricas");
+}

@@ -1,0 +1,48 @@
+/*
+19) Idem. al ejercicio 18.a) y 18.b) pero devolviendo el resultado en un parámetro de salida void
+Fac(int n, out int f)
+
+*/
+
+
+using System.Runtime.InteropServices;
+
+Console.WriteLine("escriba un numero para sacar su factorial");
+string x = Console.ReadLine();
+int n = int.Parse(x);
+
+int resultado;
+Fac(n , out resultado);
+Console.WriteLine("El factorial de : " + n + ", es :  " + resultado);
+
+resultado = 1;
+
+Fac2(n , out resultado);
+Console.WriteLine("El factorial de : " + n + ", con la segunda cuenta es :  " + resultado);
+
+void Fac(int n , out int resultado)
+{
+    int i;
+    resultado = 1;
+    for (i = 1 ; i <= n ; i++)
+    {
+        resultado = (resultado * i);
+    }
+}
+
+
+
+
+void Fac2(int n , out int resultado)
+{
+    if (n == 0 || n == 1)
+    {
+       resultado = 1;
+       
+    }
+    else
+    {
+        Fac2(n-1, out resultado);
+        resultado*= n;
+    }
+}

@@ -1,0 +1,5 @@
+/*
+ ¿Qué diferencias existen entre las conversiones de tipo implícitas y explícitas?
+
+ Las segundas requieren de un operador de conversion, realizar el casting, Ej: i = (int)x;
+*/

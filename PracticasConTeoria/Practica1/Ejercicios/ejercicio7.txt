@@ -1,0 +1,6 @@
+/*
+7) Qué hace la instrucción Console.WriteLine("100".Length); ?   Cuenta la cantidad de caractetes
+
+
+Console.WriteLine("100".Length);
+*/

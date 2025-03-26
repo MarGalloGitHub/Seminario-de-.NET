@@ -1,0 +1,10 @@
+
+//15) ¿Cuál es el problema del código siguiente y cómo se soluciona
+ 
+/* int i;
+ for (i = 1; i <= 10;)   habia un int dentro del for, mal uso se declaracion de variables
+ {
+ Console.WriteLine(i++);
+ }
+
+ */

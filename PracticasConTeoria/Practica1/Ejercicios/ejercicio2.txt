@@ -1,0 +1,17 @@
+/*
+2) Investigar por las secuencias de escape \n, \t , \" y \\. Escribir un programa que las utilice para 
+imprimir distintos mensajes en la consola
+*/
+/*
+Console.WriteLine("Hola \n mundo1" );
+Console.ReadKey();
+
+Console.WriteLine("Hola \t mundo2" );
+Console.ReadKey();
+
+Console.WriteLine("Hola \" mundo3" );
+Console.ReadKey();
+
+Console.WriteLine("Hola \\ mundo4" );
+Console.ReadKey();
+*/

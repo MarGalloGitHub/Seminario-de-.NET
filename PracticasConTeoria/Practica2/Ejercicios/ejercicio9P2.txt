@@ -1,0 +1,48 @@
+/* 9) Investigar sobre el tipo DateTime y usarlo para medir el tiempo de ejecución de los algoritmos 
+implementados en el ejercicio anterior.
+
+DateTime helps developer to find out more information about Date and Time like Get month, day, year, week day. 
+It also helps to find date difference, add number of days to a date, etc.
+
+It initializes a new instance of DateTime object. At the time of object creation we need to pass required parameters like year, month, day, etc. 
+DateTime date1 = new DateTime(2015, 12, 25);
+Console.WriteLine(date1.ToString()); // 12/25/2015 12:00:00 AM
+
+DateTime object contains two static read-only fields called as MaxValue and Minvalue.
+Console.Write(DateTime.MinValue);
+Console.Write(DateTime.MaxValue);
+
+DateTime contains a variety of methods which help to manipulate DateTime Object. It helps to add number of days, hour, minute, seconds to a date,
+ date difference, parsing from string to datetime object, get universal time and many more.
+
+ Mas info: https://www.c-sharpcorner.com/article/datetime-in-c-sharp/
+
+
+using System.Text;
+using System.Timers;
+using System.Diagnostics;
+
+Stopwatch timeMeasure = new Stopwatch();
+timeMeasure.Start();
+
+string i = Console.ReadLine();
+i = Console.ReadLine();
+i = Console.ReadLine();
+
+timeMeasure.Stop();
+
+Console.WriteLine($"Tiempo1: {timeMeasure.Elapsed.TotalMilliseconds} ms");
+
+timeMeasure = new Stopwatch();
+timeMeasure.Start();
+
+StringBuilder sb = new StringBuilder("");
+string h = sb.ToString(); // parar traerse un valor 
+sb.Append(Console.ReadLine());  //para agregar cosas
+sb.Append(Console.ReadLine());
+sb.Append(Console.ReadLine());
+
+timeMeasure.Stop();
+Console.WriteLine($"Tiempo2: {timeMeasure.Elapsed.TotalMilliseconds} ms");
+
+*/

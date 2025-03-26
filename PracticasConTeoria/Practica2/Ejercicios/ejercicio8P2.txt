@@ -1,0 +1,53 @@
+/*
+8) Investigar acerca de la clase StringBuilder del espacio de nombre System.Text ¿En qué 
+circunstancias es preferible utilizar StringBuilder en lugar de utilizar string? Implementar un 
+caso de ejemplo en el que el rendimiento sea claramente superior utilizando StringBuilder en lugar 
+de string y otro en el que no.
+
+In C#, the string type is immutable. It means a string cannot be changed once created. 
+For example, a new string, "Hello World!" will occupy a memory space on the heap. 
+Now, by changing the initial string "Hello World!" to "Hello World! from Tutorials Teacher" 
+will create a new string object on the memory heap instead of modifying an original string at 
+the same memory address. This behavior would hinder the performance if the original string 
+changed multiple times by replacing, appending, removing, or inserting new strings in the original string.
+
+To solve this problem, C# introduced the StringBuilder in the System.Text namespace. The StringBuilder doesn't 
+create a new object in the memory but dynamically expands memory to accommodate the modified string.
+
+You can create an object of the StringBuilder class using the new keyword and passing an initial string. 
+The following example demonstrates creating StringBuilder objects.
+
+using System.Text; // include at the top
+            
+StringBuilder sb = new StringBuilder(); //string will be appended later
+//or
+StringBuilder sb = new StringBuilder("Hello World!");
+
+The StringBuilder is not the string. Use the ToString() method to retrieve 
+a string from the StringBuilder object.
+
+StringBuilder sb = new StringBuilder("Hello World!");
+
+var greet = sb.ToString(); //returns "Hello World!"
+
+StringBuilder is mutable.
+StringBuilder performs faster than string when appending multiple string values.
+Use StringBuilder when you need to append more than three or four strings.
+Use the Append() method to add or append strings to the StringBuilder object.
+Use the ToString() method to retrieve a string from the StringBuilder object.
+
+
+
+using System.Text;
+
+string i = Console.ReadLine();
+i = Console.ReadLine();
+i = Console.ReadLine();
+
+StringBuilder sb = new StringBuilder("");
+string h = sb.ToString(); /*parar traerse un valor 
+sb.Append(Console.ReadLine());  //para agregar cosas
+sb.Append(Console.ReadLine());
+sb.Append(Console.ReadLine());
+
+*/
